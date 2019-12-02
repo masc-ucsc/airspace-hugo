@@ -1,0 +1,17 @@
+{{ partial "global-header.html" . }}
+
+<div class="post">
+  <!-- Wrapper Start -->
+  <section class="section" style="border: 1px dotted #ddd;">
+    <div class="container">
+      <div class="row">
+        <div>
+          <div class="block">
+						{{ with .Params.image }}<img src="{{ . | absURL }}" width="100%" alt="post-image"> {{ end }}
+            <p>{{ .Content }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
