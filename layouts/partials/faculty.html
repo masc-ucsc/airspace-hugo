@@ -1,0 +1,25 @@
+{{ partial "global-header.html" . }}
+
+<!-- Portfolio Start -->
+<section id="portfolio-work">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <div class="portfolio-contant">
+            <ul id="portfolio-contant-active">
+              {{ range .Site.Data.faculty.portfolio }}
+              <a style="color:#000000;" href="{{ .home }}">
+              <li class="mix {{ .category }}">
+                <h2>{{ .name }}</h2>
+                <p>{{ .description }}</p>
+              </li>
+              </a>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
